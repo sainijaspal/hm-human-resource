@@ -1,0 +1,70 @@
+html,body {
+            height: auto !important;
+        }
+
+        .auth-button-github {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 14px;
+            padding-top: 16px;
+        }
+
+        .auth-button-github .auth-button {
+            min-width: 250px;
+            border-radius: 3px !important;
+            text-align: left;
+            padding: 15px 50px 18.5px 0.5px;
+            background: #04AA51;
+            border-color: #04AA51;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .auth-button-github .auth-button:hover {
+            background: #2ABD4A;
+            border-color: #2ABD4A;
+        }
+
+        .auth-button-github .auth-button .logo-container+span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .auth-button-github .auth-button .logo-container {
+            display: inline-block;
+            margin-right: 8px;
+            padding: 2px;
+        }
+
+        .auth-button-github .dropdown {
+            width: 50px;
+            margin-left: 0;
+        }
+
+        .auth-button-github .dropdown-toggle {
+            background: #04AA51;
+            padding: 12.249px 19px;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            height: 50px;
+            margin-bottom: 8px;
+            border-radius: 0px 3px 3px 0px;
+            width: 100%;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .alert-full-width {
+            width: 100%;
+            float: left;
+            padding: 10px 15px;
+            border-radius:0px;
+            margin: 5px 0 10px;
+            background: rgba(240, 128, 128, 0.5) !important;
+            border: none;
+        }
+        
+        .alert-icon img {
+            width: 20px;
+            float: left;
+            margin: 0 10px 0 0;
+        }

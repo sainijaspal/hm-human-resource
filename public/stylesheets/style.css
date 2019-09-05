@@ -1,0 +1,3372 @@
+body{
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important; */
+    color: #24292e;
+    position: relative;
+    font-family: 'Lato', sans-serif !important;
+}
+.label {
+    padding: .1em .6em .15em;
+}
+header.main-header {
+    position: fixed;
+    width: 100%;
+}
+
+.content-wrapper {
+    padding-top: 35px;
+    margin-top: 19px;
+}
+/* .add-content-wrapper
+{
+  float: left;
+  min-height: auto !important; 
+}  */
+.center {
+    z-index: 1000;
+    margin: 300px auto;
+    padding: 10px;
+    width: 120px;
+    border-radius: 10px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -moz-opacity: 1;
+}
+
+.center img {
+    height: 90px;
+    width: 90px;
+}
+
+#alert_box {
+    display: inline-block;
+    float: right;
+    padding: 9px 46px;
+    max-width: 830px;
+}
+
+.content-header>h1 {
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+.content-header h1:empty {
+    display: none;
+}
+
+.mark-btn {
+    min-width: 130px;
+}
+
+.commit-upper-wrap {
+    float: left;
+    width: 100%;
+}
+
+.commmit-list-no-record {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    align-items: center;
+    background: #fcf8e3;
+    border: 1px solid #faebcc;
+    font-size:16px;
+    padding: 10px;
+}
+
+ul.commit-wrap {
+    float: left;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    padding-left: 10px;
+}
+
+li.commit {
+    float: left;
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #d4d4d4;
+    background-color: #fff;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+    justify-content: center;
+}
+
+.commit-author-detail li.commit {
+    min-height: 38px;
+}
+
+li.commit:nth-last-child(1) {
+    border-bottom: 1px solid #d4d4d4;
+}
+
+li.date {
+    padding: 10px 10px 0 0;
+    font-size: 15px;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+li.date img {
+    width: 22px;
+    position: absolute;
+    left: -25px;
+    padding: 4px;
+    top: 10px;
+}
+
+.user-img {
+    float: left;
+    margin-right: 20px;
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+}
+
+.user-info {
+    float: left;
+    max-width: 700px;
+    margin: 0 0 0 10px;
+}
+
+.user-name-login{
+    font-weight: 600;
+    display: block;
+    line-height:8px;
+    padding-bottom: 3px;
+}
+.user-info>a {
+    font-size: 16px;
+    color: #424242;
+    line-height: 0;
+}
+
+.commit-buttons {
+    float: right;
+    margin-top: 6px;
+}
+
+.btn-transparent {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #424242;
+}
+
+.commit-buttons a:hover {
+    background: #f1f1f1;
+    color: #424242;
+    border: 1px solid #ccc;
+}
+
+.commit-buttons button {
+    margin-top: -3px;
+    padding: 5px 12px;
+}
+
+.commit-buttons .btn-transparent {
+    padding: 5px 12px 6px 12px !important;
+    margin: -2px 0 0;
+}
+
+.comment-info .btn-transparent {
+    padding: 5px 12px;
+}
+
+.reviewer-box ul.commit-wrap {
+    padding: 0;
+    border: none;
+}
+
+.reviewer-search {
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 1px solid #d4d4d4;
+    width: 100%;
+    background: #fff;
+    padding: 8px 0px;
+}
+
+.reviewer-search input {
+    min-width: 320px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.reviewer-search button {
+    padding: 4px 20px;
+    margin-top: -4px;
+}
+
+ul.ui-autocomplete {
+    background: #fff;
+    padding: 0;
+    list-style: none;
+    float: left;
+    width: 250px !important;
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.search-li-list .user-img {
+    margin-right: 0;
+}
+
+ul.ui-autocomplete .ui-menu-item {
+    padding: 4px 8px;
+}
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active {
+    margin: 0 !important;
+}
+#ui-id-1 .user-info a {
+    margin-top: 8px;
+    display: inline-block;
+}
+.reviewer-ul.commit-wrap .user-info {
+    line-height: 1.2;
+}
+.reviewer-ul.commit-wrap .user-info span.user-email {
+    display: block;
+    font-size: 13px;
+    color: #9e9e9e;
+}
+.permission-select button {
+    margin-top: 1px;
+}
+
+.commit-wrap li.commit a.delete-icon {
+    font-size: 24px;
+    margin-right: 20px;
+    color: red;
+}
+
+.commit-wrap li.commit a {
+    font-size: 14px;
+    color: #24292e;
+    font-weight: 600;
+}
+
+.commit-wrap li.commit .commit-li-column a {
+    min-width: 85px;
+}
+
+.commit-wrap li.commit a:hover {
+    color: #24292e;
+}
+
+.commit span.user-img {
+    margin-right: 5px;
+}
+
+.reviewer-search input {
+    border: 1px solid #ccc;
+    min-height: 30px;
+    min-width: 250px;
+}
+
+.team-manage-section .reviewer-search input {
+    min-height: 29px;
+}
+
+textarea {
+    border: 1px solid #ccc;
+}
+
+.msg-area {
+    width: 100%;
+}
+
+#alert_box {
+    display: block;
+    position: fixed;
+    right: 15px;
+    z-index: 11111;
+    top: 68px;
+}
+.user-profile {
+    width: 100%;
+    float: left;
+    margin: 0px 0 5px 0px;
+    max-width: 65%;
+    background: #fff;
+}
+.user-profile.facebookPopup {
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.14);
+    -ms-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.14);
+}
+
+.profile-pic-user {
+    max-width: 50px;
+    height: 50px;
+    float: left;
+    width: 100%;
+}
+
+.profile-pic-user .profile-users-img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile-pic-comment {
+    width: 100%;
+    float: left;
+    max-width: 470px;
+}
+
+.profile-pic-comment textarea {
+    resize: none;
+    border: none;
+    height: 41px;
+    padding: 6px 20px;
+    margin-top: 6px;
+}
+
+.profile-pic-comment .form-group {
+    margin: 0px;
+    position: relative;
+}
+
+.profile-pic-user .profile-users-img::after {
+    position: absolute;
+    width: 1px;
+    height: 42px;
+    left: 76px;
+    content: '';
+    top: 19px;
+    background: #ccc;
+    z-index: 999999;
+}
+
+.user-des-head {
+    width: 100%;
+    float: left;
+    background: #3C8DBC;
+    padding: 8px 10px 10px;
+    position: relative;
+    margin: 0px 0px 10px 0px;
+}
+
+.user-des-head:after, .user-des-head:before {
+	bottom: 0px;
+	left: 30px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.user-des-head:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #fff;
+	border-width: 7px;
+}
+
+.user-des-head span {
+    color: #fff;
+}
+
+.user-des-head .close-icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.user-des-head .close-icon a {
+    color: #fff;
+}
+
+.user-des-head span i {
+    margin: 0px 5px 0 0px;
+}
+
+.user-profile-col {
+    padding: 15px;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.user-profile.facebookPopup {
+    z-index: 5;
+    position: relative;
+}
+
+.addpost-popup-content,
+.user-profile .close-icon {
+    display: none;
+}
+.user-profile.facebookPopup .addpost-popup-content,
+.user-profile.facebookPopup .close-icon {
+    display: block;
+}
+/* .black-overlay {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+} */
+a[title="ReadMe"],
+a[title="Database diagram"],
+a[title="Manage Collaborators"],
+a[title="Dashboard"],
+a[title="Project Stats"]  {
+    font-size:15px;
+    padding: 0 2px;
+    color: rgb(102, 102, 102);
+}
+
+a[title="ReadMe"]:hover,
+a[title="Database diagram"]:hover,
+a[title="Manage Collaborators"]:hover,
+a[title="Dashboard"]:hover  {
+    font-size:15px;
+    padding: 0 2px;
+    color: #3c8dbc;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.box-body.commit-lists {
+    padding: 0;
+}
+
+
+.commit-lists td {
+    vertical-align: middle !important;
+}
+.commit-lists td label {
+    vertical-align: middle;
+    margin: 0;
+}
+.loader_bg {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2147483647;
+}
+
+.main_loader_box {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 20%;
+}
+
+.circle {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(42, 160, 180, 0.95);
+    opacity: .9;
+    border-right: 5px solid rgba(0,0,0,0);
+    border-left: 5px solid rgba(0,0,0,0);
+    border-radius: 50px;
+    box-shadow: 0 0 35px #25a2b7;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    -moz-animation: spinPulse 1s infinite ease-in-out;
+    -webkit-animation: spinPulse 1s infinite linear;
+}
+
+.circle1 {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(42, 160, 180, 0.95);
+    opacity: .9;
+    border-left: 5px solid rgba(0,0,0,0);
+    border-right: 5px solid rgba(0,0,0,0);
+    border-radius: 50px;
+    box-shadow: 0 0 15px #25a2b7;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: -39px;
+    -moz-animation: spinoffPulse 1s infinite linear;
+    -webkit-animation: spinoffPulse 1s infinite linear;
+}
+
+@-moz-keyframes spinPulse {
+    0% {
+        -moz-transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #e1731b;
+    }
+
+    50% {
+        -moz-transform: rotate(145deg);
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: rotate(-320deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes spinoffPulse {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spinPulse {
+    0% {
+        -webkit-transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #e1731b;
+    }
+
+    50% {
+        -webkit-transform: rotate(145deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(-320deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes spinoffPulse {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.profile-upload-popup {
+    background: #fff none repeat scroll 0 0;
+    float: none;
+    left: 18%;
+    position: absolute;
+    top: 9%;
+    width: 50%;
+    z-index: 99999999;
+}
+
+.uploaded-pic {
+    width: auto;
+    float: left;
+}
+
+.uploaded-pic span.upload-pic-view {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+.upload-pic-col .profile-pic-comment .form-group::after {
+    display: none;
+}
+
+.comment-submit {
+    width: 100%;
+    float: left;
+    margin: 0px;
+    display: inline-block;
+    background: #f4f4f4;
+    padding: 7px 15px 6px 15px;
+    margin: 11px 0 0 0px;
+}
+
+.profile-upload-popup .profile-pic-comment .form-group::after {
+    height: 90px;
+}
+
+.upload-pic-col {
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.upload-pic-submit-col {
+    width: 100%;
+    float: left;
+    padding: 10px 0 0 0px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.upload-btn-wrapper {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+  
+.upload-btn-wrapper .btn {
+    background: #ccc;
+    border: none;
+    float: left;
+}
+  
+.upload-btn-wrapper input[type=file] {
+    cursor: pointer;
+    font-size: 100px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+.uploaded-pic-col {
+    float: left;
+    margin: 0 0 0 10px;
+    border: 1px solid #ededed;
+}
+
+.uploaded-pic-col span {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 70px;
+    height: 60px;
+}
+
+.upload-pic-col .profile-pic-comment {
+    max-width: 90%;
+}
+.manage-notification-table {width: 100% !important;}
+.manage-notification-table th {
+    vertical-align: text-top !important;
+    font-size: 12.5px;
+}
+.manage-notification-table input[type="text"]{ min-width:110px  }
+
+.custom-success {
+    width: auto;
+    padding: 9px 46px;
+    float: right;
+}
+
+.custom-alert {
+    width: 100%;
+    float: left;
+}
+
+.project-autocomplete {
+    width: 100%;
+    float: left;
+    padding: 20px;
+}
+
+.project-autocomplete .form-control {
+    height: 40px;
+    width: 50%;
+}
+
+.project-autocomplete label {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.post-content-panel .profile-pic-user {
+    width: 40px;
+    height: 40px;
+}
+
+.panel-comment-detail {
+    float: left;
+    padding: 2px 0 0 12px;
+    width: auto;
+}
+.panel-comment-detail span {
+    color: #9E9E9E;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+.post-container{ width:100%; max-width:75%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;}
+.post-container a{color:#3c8dbc; margin:0; padding:0; font-size:14px;}
+.post-container h3{ color:#24292e; margin:5px 0; padding:0; font-size:16px;}
+.post-container h5{ 
+    color: #367fa9;
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.post-content-panel{ width:86.8%; box-shadow:0 1px 5px 0 rgba(0, 0, 0, 0.14); border:1px solid #dedede; margin:10px 0 0 0; float:left; background: #fff;}
+.post-content-panel-wrap {padding: 15px; float: left; width: 100%;}
+.post-screen{ margin:20px 0 0 0; width:100%; display:block}	
+.post-container .post-content-panel a { border-left: 0px solid #e8e8e8; color: #000; font-size: 14px; margin: auto; padding: 0px; float: left; width: 100%;}
+.post-container .post-content-panel p{ font-size:13px; padding:0px; float:left; width:100%; box-sizing: border-box; margin: 15px 0px 15px 0px;}
+
+.repo-detail {
+    margin-top: -44px;
+    float: left;
+    width: 100%;
+}
+.repo-detail .commitDropdownSection {
+    margin-bottom: 20px;
+    float: right;
+    width:400px
+}
+
+.commitDropdownSection .btn-group, .commitDropdownSection .btn-group .multiselect {width: 100%; text-align: left}
+.commitDropdownSection .btn-group .multiselect {white-space: normal;}
+
+.commitDropdownSection .user-div{padding-right: 0;padding-left: 0}
+.loading-img-sm{width:100%; text-align:center;margin: 16px 0 0 0;float: left; display:none }
+
+.user-profile-heading {
+    width: 100%;
+    float: left;
+    margin: 10px 0 0 0px;
+}
+.user-profile-heading{
+    font-size: 20px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.user-profile-heading span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.user-profile-heading .repo_name_profile {
+    float:right;
+}
+
+.no-record-box {
+    width: 100%;
+    float: left;
+    margin: 0px;
+}
+
+.no-record-box h3 {
+    color: #999;
+    text-align: center;
+    margin: 0px;
+}
+
+.project-dashboard {
+    padding: 20px 0px;
+}
+
+.project-dashboard label {
+    width: auto;
+    float: left;
+    padding: 8px 10px 0 0px;
+}
+
+.project-dashboard .form-control {
+    width: 43%;
+}
+
+.displaypost .profile-pic-user .profile-users-img::after {
+    display: none;
+}
+
+.edit-post-col {
+    width: auto;
+    display: inline-block;
+    float: right;
+}
+
+.edit-post-col span.post-icon {
+    width: auto;
+    display: inline-block;
+    padding: 0 0px 0 10px;
+}
+
+.edit-post-col span.post-icon a:hover {
+    opacity: 0.6;
+}
+
+.main-no-record-box {
+    background: #fff;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+    min-height: 300px;
+}
+
+.navbar .navbar-nav .notification-box .dropdown-menu ul li .notification-date {
+    color:#90949c;
+    font-size: 12px;
+    width: 100%;
+}
+
+.navbar  .navbar-nav .notification-box a {
+    padding: 13px 15px 13px 15px;
+}
+
+.navbar  .navbar-nav .notification-box a.get-notifications {
+    cursor: pointer;
+}
+
+.navbar  .navbar-nav .notification-box .dropdown-menu {
+    border-radius: 2px;
+    margin-top: 0;
+    background-color: #fff;
+    float: left;
+    min-width: 450px;
+    padding: 0px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+
+.navbar  .navbar-nav .notification-box .dropdown-menu ul.inner-dropdown {
+    max-height: 398px;
+    overflow: auto;
+    width: 100%;
+}
+
+.navbar  .navbar-nav .notification-box .dropdown-menu .header-notification, #li_collaborators .dropdown-menu .header-notification  {
+    background: #eee;
+    padding: 12px 15px;  
+    width: 100%;
+    font-size: 15px;
+    color: #212121;
+    letter-spacing: 0;
+    line-height: 15px;
+    font-weight: 600;
+}
+.navbar  .navbar-nav .notification-box a:hover{text-decoration:underline; }
+.navbar  .navbar-nav .notification-box .slimScrollDiv{overflow: visible;}
+.navbar  .navbar-nav .notification-box .dropdown-menu ul {
+    padding: 0px;
+    float: left;
+}
+
+.navbar  .navbar-nav .notification-box .dropdown-menu ul li {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+    line-height: 16px;
+}
+
+.navbar  .navbar-nav .notification-box .dropdown-menu ul li:last-child {
+    border: none;
+}
+
+.navbar  .navbar-nav .notification-box .dropdown-menu ul li a {
+    white-space: normal;
+    color: #24292e;
+    float: left;
+    width: 100%;
+    padding: 0px;
+}
+
+.navbar  .navbar-nav .notification-box .dropdown-menu ul li a:hover {
+    color: #24292e;
+}
+
+.navbar  .navbar-nav .notification-box.open .dropdown-toggle:before {
+    border-bottom: 10px solid #eee;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    margin: 4px auto;
+    position: absolute;
+    right: 0;
+    width: 0;
+    z-index: 9999;
+    top: 32px;
+}
+
+.navbar .navbar-nav .notification-box .dropdown-menu ul li span {
+    width: 85%;
+    float: left;
+}
+
+.navbar .navbar-nav .notification-box .dropdown-menu ul li span strong {
+    font-weight: 600;
+}
+
+.navbar .navbar-nav .notification-box .dropdown-menu ul li span a {
+    padding: 0px;
+    font-weight: 600;
+}
+
+.navbar .navbar-nav .notification-box .dropdown-menu ul li span.notification-user-name a {
+    color: #24292e;
+}
+
+.notification-img {
+    float: left;
+    margin: 2px 10px 0 0;
+}
+
+.notification-img img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.notification-box #notificationsCount, #updatesCount, #invitationsCount  {
+    position: absolute;
+    padding: 0px 2px;
+    right: 2px;
+    top: 2px;
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.navbar .navbar-nav .information-dropdown  .dropdown-menu {
+    margin-top: 3px;
+}
+
+.navbar .navbar-nav .notification-custom  .dropdown-menu {
+    min-width: 400px;
+}
+
+.table-responsive {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.no-Notification{
+    padding: 12px !important;
+    background-color: #e77676 !important;
+    font-size: 16px;
+}
+.commmit-list-no-record {
+    color: #999; 
+    margin-top: 10px;
+}
+.notification-list li.commit {
+    padding: 10px;
+}
+.notification-list .user-info {
+    width: 80%;
+}
+.alert-full-width {
+    width: 100%;
+    float: left;
+    padding: 10px 15px;
+    border-radius:0px;
+    margin: 5px 0 10px;
+    background: rgba(240, 128, 128, 0.5) !important;
+    border: none;
+}
+
+.alert-icon img {
+    width: 20px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.manage-collaborator-head {
+    width: 100%;
+    float: left;
+    border: 1px solid #e1e1e1 !important;
+    padding: 12px 15px 17px 15px;
+    border-radius: 0px !important;
+    background: #f4f4f4 !important;
+}
+
+.btn-commit-view {
+    font-size: 12px;
+    color: #24292e;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
+    border: 1px solid #e1e4e8;
+    float: right;
+    padding: 4px 12px 4px 12px;
+}
+
+.btn-commit-view:hover{
+    border-color: rgba(27,31,35,0.35);
+}
+
+.table-team-members tr td {
+    position: relative;
+    z-index: 9;
+}
+
+.table-team-members tr td .reviewer-idle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 6px auto 0;
+    text-align: center;
+    width: 15%;
+}
+
+.table-team-members tr td .reviewer-active {
+    left: 50%;
+}
+
+.table-team-members tr td .reviewer-idle input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+
+.box-header-heading {
+    width: 30%;
+    float: left;
+}
+
+.box-header-control-row {
+    width: 70%;
+    float: left;
+    text-align: right;
+}
+
+.box-header-control-column {
+    width: auto;
+    display: inline-block;
+    margin-left: 14px;
+}
+
+.box-header-control-column .control-label {
+    padding: 0;
+    width: auto;
+    margin: 5px 10px 0 0px;
+    color: #fff;
+}
+
+.box-header-control-column .form-control {
+    width: auto;
+    float: left;
+    padding: 4px 8px;
+    height: 30px !important;
+    width:110px;
+}
+
+.box-header-control-column .btn {
+    width: auto !important;
+    float: left;
+    padding: 5px 10px !important;
+    border: none !important;
+}
+
+.box-header-heading .box-title {
+    margin-top: 8px;
+}
+
+.user-profile-detail {
+    width: 100%;
+    float: left;
+}
+
+.user-name-detail {
+    width: auto;
+    display: inline-block;
+    margin: 7px 0 0 7px;
+}
+
+.user-status-container ul .commit {
+    padding: 10px;
+}
+
+.status-detail-col h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.status-detail-col {
+    width: 100%;
+    float: left;
+    border: 1px solid #e1e1e1;
+    margin: 12px 0 0;
+    padding: 10px 0 10px 14px;
+    background: #f9f9f9;
+}
+
+.user-status-container .morning_status {
+    margin: 8px 0 0;
+}
+
+.clear{
+    clear:both;
+}
+
+.margin-right-1{
+    margin-right: 1%;
+}
+
+.no-padding{
+    padding: 0 !important;
+}
+
+.width-12{
+    width: 12% !important;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #a5a9ad;
+    border-color: #8d9195;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #8d9195;
+}
+
+.padding-0 {
+    padding: 0 !important;
+}
+
+.divider {
+    border-bottom: 1px solid #eeeeee !important;
+    margin: 18px 0px 18px 0px;
+}
+
+.collaborator-li-column .user-info {
+    margin: 4px 0 0 10px;
+}
+
+.team-row-one {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.team-column-one {
+    flex: 1;
+}
+
+.team-member-row-one .user-info {
+    margin: 0 0 0 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40px;
+    float: inherit;
+}
+
+#commitListContainer .commit-li .user-info {
+    width: 64%;
+    position: relative;
+}
+
+#commitListContainer .commit-li .user-info a span p{
+    margin: 0;
+}
+
+#commitListContainer .commit-li .user-info .hidden-text-expander {
+    width: auto;
+    display: inline-block;
+}
+
+#commitListContainer .commit-li .user-info .hidden-text-expander .ellipsis-expander {
+    padding: 0 5px 5px;
+    box-shadow: none;
+    margin: 0;
+    line-height: 4px;
+    border-radius: 1px;
+    letter-spacing: 1px;
+    outline: none;
+    transition: all 0.3s ease-in-out 0s;
+    margin: 0 5px;
+    border-bottom: 3px solid transparent;
+}
+
+#commitListContainer .commit-li .user-info .hidden-text-expander .ellipsis-expander:hover {
+    background-color: #3c8dbc;
+    color: #FFFFFF;
+}
+
+.commit-desc {
+    width: 65%;
+    float: left;
+    margin-top: 12px;
+}
+
+.commit-desc p {
+    margin: 0;
+}
+
+.commit-head-desc {
+    margin: 4px 0 0;
+    float: left;
+    width: 100%;
+}
+
+.commit-message-title.box-title{
+    font-size: 17px !important;
+    font-weight: 600;
+    margin: 0;
+}
+
+.commit-message-title.box-title p {
+    margin:0;
+}
+
+.commit-head-desc{
+    margin:10px 0 0;
+}
+
+.commit-head-desc, .commit-head-desc p, .commit-head-desc ul li, .commit-head-desc ol li, .commit-head-desc a, .commit-head-desc pre{
+    font-size: 13px;
+    max-width: 100%;
+    overflow: visible;
+    word-wrap: break-word;
+    color:#fff;
+    letter-spacing: 0.5px;
+}
+
+.commit-head-desc ul, .commit-head-desc ol{
+    padding:0;
+    margin: 0 0 5px 13px;
+}
+
+.commit-head-desc p {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 13px;
+}
+
+.commit_head_inside {
+    width: 100%;
+    float: left;
+    line-height: 100%;
+}
+
+.commit_head_inside .box-title {
+    width: 80%;
+}
+
+.team-setting-tab-row {
+    border: 1px solid #d1d1d1;
+    padding: 0 15px;
+    margin-bottom: 24px;
+    background: #FFFFFF;
+    line-height: 0;
+}
+
+.team-setting-tab-col ul {
+    padding: 0;
+    margin: 0;
+}
+
+.team-setting-tab-col ul li {
+    display: inline-block;
+}
+
+.team-setting-tab-col ul li a {
+    padding: 0 10px;
+    color: #424242;
+    border-bottom: 2px solid transparent;
+    padding: 25px 15px;
+    width: auto;
+    float: left;
+    cursor: pointer;
+}
+
+.team-setting-tab-col ul li a:hover {
+    border-bottom: 2px solid #3c8dbc;
+}
+
+.team-setting-tab-col ul li.active a {
+    border-bottom: 2px solid #3c8dbc;
+}
+
+.setting-container,
+.team-members-container {
+    background-color: #FFFFFF;
+    padding: 15px;
+    position: relative;
+    top: -25px;
+    border: 1px solid #d1d1d1;
+}
+
+.team-setting-head h3 {
+    margin-top: 0;
+}
+
+.team-setting-input .form-control {
+    width: 50%;
+}
+
+.team-setting-input p {
+    font-size: 12px;
+}
+
+.team-setting-col .control-label {
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: left;
+}
+
+.team-setting-col .form-control.bootstrap-select {
+    width: auto !important;
+}
+
+.team-setting-col .dropdown-menu  {
+    margin: 8px 0 0;
+}
+
+.team-setting-col .setting-team-view {
+    margin: 20px 0 0;
+}
+
+.setting-team-view h5 {
+    font-size: 16px;
+}
+
+.team-visibilty-col {
+    margin: 16px 0 0;
+}
+
+.team-visibilty-col .form-checkbox  {
+    margin: 15px 0;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.team-visibilty-col .form-checkbox input[type=radio] {
+    float: left;
+    margin: 5px 0 0 -20px;
+    vertical-align: middle;
+}
+
+.team-visibilty-col .form-checkbox label {
+    margin: 0;
+}
+
+.team-visibilty-col .form-checkbox p {
+    font-size: 12px;
+    color: #555;
+}
+
+.setting-form-send {
+    padding: 0 15px;
+}
+
+.setting-form-send .btn {
+    margin: 0;
+}
+
+.setting-danger-zone {
+    margin: 30px 0 0;
+}
+
+.setting-danger-zone h3 {
+    color: #cb2431;
+}
+
+.setting-danger-zone .alert-danger {
+    background-color: #FFFFFF !important;
+    border: 1px solid #d73a49;
+    border-radius: 3px;
+    width: 70%;
+}
+
+.setting-danger-zone strong {
+    color: #24292e;
+}
+
+.team-danger-content p {
+    color: #24292e;
+}
+
+.team-delete-btn .btn-success,
+.team-delete-btn .btn-success:focus {
+    background-color: #FFFFFF;
+    border-color: rgba(27,31,35,.5);
+    color: #cb2431;
+    text-decoration: none;
+}
+
+.team-delete-btn .btn-success:hover {
+    background: #cb2431;
+    color: #fff;
+    border:1px solid #cb2431;
+}
+
+.team-members-container .table-list-header {
+    width: 100%;
+    display: inline-block;
+    background: #f4f4f4;
+    padding: 15px 15px 3px 15px;
+    border: 1px solid #e1e1e1;
+}
+
+.team-members-container .table-list-header-toggle{
+    width: auto;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+}
+
+.team-members-container .member-listing {
+    border-bottom: 1px solid #e1e4e8;
+    color: #6a737d;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.team-members-container .table-list-item {
+    display: table-row;
+    list-style: none;
+    position: relative;
+}
+
+.team-members-container .table-list-cell {
+    border-top: 1px solid #eaecef;
+    display: table-cell;
+    font-size: 12px;
+    padding: 8px 10px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.team-members-container .table-list-cell-checkbox {
+    width: 30px;
+    padding: 0 15px;
+}
+
+.team-members-container .member-avatar-cell {
+    width: 58px;
+}
+
+.team-members-container .member-avatar-cell img {
+    border-radius: 2px;
+}
+
+.team-members-container .member-detail-cell {
+    font-size: 14px;
+}
+
+.team-members-container .member-detail-cell a {
+    color: #23527c;
+}
+
+.team-members-container .list-delete-btn {
+    width: auto;
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    margin: 0 0 0 8px;
+}
+
+.team-members-container .list-delete-btn .btn {
+    background: transparent;
+    color: #cb2431;
+    border-color: rgba(27, 31, 35, .5);
+}
+
+.team-members-container .list-delete-btn .btn:hover {
+    background: #cb2431;
+    color: #FFFFFF;
+    border-color: #cb2431;
+}
+
+.team-accept-col {
+    width: 100%;
+    display: inline-block;
+    margin: 0 0 18px;
+    text-align: right;
+}
+
+#tbl-team-members_wrapper .table tr td {
+    min-height: 31px;
+    line-height: 14px;
+}
+
+#tbl-team-members_wrapper .table tr td a {
+    font-weight: normal;
+}
+
+.table-team-members #tbl_assigned_repos tr td {
+    z-index: inherit;
+}
+
+.pop-up-control-team input[type=radio] {
+    position: relative;
+    top: 2px;
+    margin: 0 4px 0 0px;
+}
+
+.member-group-icon {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: -20px;
+}
+
+.commit-reject-reason-modal .modal-header {
+    border-bottom: none;
+}
+
+.commit-reject-reason-modal .modal-header .close {
+    position: relative;
+    z-index: 9;
+    outline: none;
+}
+
+.skin-blue .main-header .information-dropdown {
+    padding: 7px 4px 0 0;
+    display: inline-block;
+}
+
+.skin-blue .main-header .information-dropdown:hover {
+    background: none;
+}
+
+.skin-blue .main-header .information-dropdown a {
+    padding: 0 !important;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.skin-blue .main-header .information-dropdown a:hover {
+    text-decoration: none;
+} 
+
+.header-icons {
+    transition: .1s ease;
+    background: hsla(0,0%,100%,.3);
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    float: left;
+    font-weight: 700;
+    line-height: 35px;
+    min-width: 35px;
+    padding: 0;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.notification-custom .inner-dropdown .notification-user-name {
+    width: 100% !important;
+    line-height: 19px;
+}
+
+.commit-box .commit-file-column .rejected-reason {
+    width: 100%;
+    float: left;
+}
+
+.commit-box .commit-file-column .rejected-reason a {
+    padding: 10px 0;
+    float: left;
+    font-size: 13px;
+}
+
+.rejected-commit-list {
+    width: 100%;
+    display: inline-block;
+}
+
+.rejected-commit-list ul {
+    margin: 0;
+    padding: 5px 0 5px 28px;
+}
+
+.rejected-commit-list ul li {
+    margin: 5px 0;
+}
+.commit-wrap li.commit .commit-li-column a.user-info-commit-title {
+    width: auto;
+    float: left;
+    line-height: normal;
+    margin: 0 5px 0 0;
+}
+
+.commit-desc.commit-dese-content {
+    width: 65%;
+    float: left;
+    margin: 10px 0 0 56px;
+    font-size: 13px !important;
+    letter-spacing: 0.5px;
+}
+
+.commit-desc.commit-dese-content ol, .commit-desc.commit-dese-content ul{
+    margin: 0 0 0 0;
+    padding: 0px 17px 0;
+}
+
+@media only screen and (max-width:1410px) {
+    .table-responsive {
+        overflow: auto;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .content-wrapper {
+        padding-top: 85px;
+    }
+    .profile-pic-user .profile-users-img {
+        float: none;
+        height: 70px;
+        width: 70px;
+        display: inline-block;
+    }
+    .profile-pic-user {
+        max-width: 100%;
+        text-align: center;
+    }
+    .profile-pic-comment .form-group::after {
+        display: none;
+    }
+    .profile-pic-comment {
+        margin: 15px 0 0 0px;
+        max-width: 100%;
+    }
+    .profile-pic-comment textarea {
+        border: 1px solid #eee;
+        padding: 6px 10px;
+    }
+    .upload-pic-col .profile-pic-comment {
+        max-width: 100%;
+    }
+    .profile-upload-popup {
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    .upload-pic-col .uploaded-pic {
+        display: none;
+    }
+    .upload-pic-col .profile-pic-comment {
+        margin: 0px 0px 15px 0px;
+    }
+    .custom-success {
+        width: 100%;
+    }
+    .project-autocomplete .form-control {
+        width: 100%;
+    }
+    .post-content-panel .profile-pic-user {
+        width: 32px;
+        height: 32px;
+    }
+    .user-profile {
+        max-width: 100%;
+    }
+    .post-container {
+        max-width: 100%;
+        float: left;
+    }
+    .team-setting-input .form-control,
+    .setting-danger-zone .alert-danger {
+        width: 100%;
+    }
+    
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 47px;
+    height: 24px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    display: none;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+.rating {
+    float: left;
+    border: none;
+}
+
+.rating:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.rating:not(:checked)>label {
+    float: right;
+    width: 1em;
+    padding: 0 .1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: #ddd;
+}
+
+.rating:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rating>input:checked~label {
+    color: #f70;
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: gold;
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+    color: #ea0;
+}
+
+.rating>label:active {
+    position: relative;
+}
+
+.commit-box .file{
+    position: relative;
+margin-top: 16px;
+margin-bottom: 16px;
+border: 1px solid #ddd;
+border-radius: 3px;
+}
+.share-modal-footer textarea {
+    width: 100% !important;
+    float: left;
+    margin-bottom: 8px;
+}
+
+.commit-box .file-header {
+    padding: 5px 10px;
+    background-color: #fafbfc;
+    border-bottom: 1px solid #e1e4e8;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.commit-box .commit-file-column .file-header {
+    line-height: 0;
+}
+
+.file-header .share-link {
+    padding: 3px 10px;
+    font-size: 13px;
+    margin: 0 5px 0 0;
+}
+
+.file-header .share-link .fa-share-alt {
+    margin: 0 2px 0 0;
+}
+
+.commit-box  .file-header .link-gray-dark {
+    color: #24292e !important;
+}
+
+.commit-box td {
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 20px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.commit-box .tbl-box{
+    width: 100%;
+   background: #fff;
+}
+.commit-box .tbl-containor{
+ overflow-x: auto;
+overflow-y: hidden;
+}
+.commit-box .code-deletion {
+    background-color: #ffecec;
+}
+.commit-box .code-addition {
+    background-color: #eaffea;
+}
+.commit-box .code-inner {
+    overflow: visible;
+    font-size: 13px;
+    color: #24292e;
+    word-wrap: normal;
+    white-space: pre;
+    line-height: 22px;
+    font-family: monospace !important;
+}
+.commit-files-box .commit-wrap{
+    padding-left: 0px !important;
+}
+.commit-files-box .user-img {
+    height: 30px !important;
+    width: 30px !important;
+}
+.commit-files-box .sha-det{
+    float: right;
+    font-size: 12px;
+}
+
+.commit-files-box .change-info {
+    width: 100%;
+    margin-top: 8px;
+    float: left;
+    padding-left: 10px;
+}
+
+.commit-files-box .octicon{
+    fill: currentColor;
+}
+
+.commit-files-box .mesage-box{
+    width:70%;
+    float: left;
+}
+
+.commit-files-box .mesage-box .post-comment-box{
+    margin: 10px 0px;
+    width: 100%;
+    float: left;
+}
+
+.commit-files-box .comment-avatar{
+    float: left;
+    border-radius: 3px;
+    width: 44px;
+    height: 44px;
+  margin-right: 20px;
+    display: inline-block;
+background-position: center;
+background-size: cover;
+border-radius: 50%;
+-webkit-border-radius: 50%;
+}
+.commit-files-box .message-containor{
+float: left;
+box-sizing: border-box;
+width: 89%;
+}
+
+.commit-files-box .message-containor textarea{width: 100%;padding: 10px;}
+.commit-files-box .message-containor button, .form-horizontal button{
+    float:right;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.inline-reply-text{width: 100%;border: 1px solid #ccc;padding: 3px 7px;}
+.single-comment-section .message-containor .comment{border: none;}
+.single-comment-section .message-containor .comment-header{background: #fff;padding: 0px;border-bottom:0px;}
+.single-comment-section .message-containor .comment-body{padding: 5px 0px;}
+.single-comment-section .post-comment-box{padding:5px 0px;float: left;width: 100%;}
+.single-comment-section  .comment-avatar{width: 30px !important;height: 30px !important;margin-left:10px }
+.single-comment-section .comment-header::before, .single-comment-section .comment-header::after{
+    border: none !important;
+}
+.single-comment-section .single-comment-box{
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 0px 0 0 0;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 780px;
+}
+.comment-header .time-ago{color: #586069 !important;}
+.single-comment-section .mesage-box{width: 100%;background: #fff;}
+.single-comment-section .reason-header {
+    padding: 0 0 2px 0px;
+}
+.message-containor .comment {
+    border: 1px solid #b6b6b6;
+    border-radius: 3px;
+
+}
+
+.mesage-box .message-containor{margin-bottom:0px; }
+.delete-comment, .edit-comment{float:right; cursor: pointer }
+.edit-comment{margin-right: 15px;}
+.single-comment-box-list .post-comment-box:first-child{margin-top:10px;}
+.message-containor .comment-header {
+    background: #f2f2f2;
+    padding: 6px 16px;
+    position: relative;
+    border-bottom: 1px solid #b6b6b6;
+   
+}
+.message-containor .comment-header a{ color: #586069;}
+
+.message-containor .comment-header:before,
+.message-containor .write-comment:before {
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  
+  border-right:10px solid #b6b6b6; 
+  position: absolute;
+  content: '';
+  left: -11px;
+}
+.message-containor .comment-header:after,
+.message-containor > .write-comment:after {
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  
+  border-right:10px solid #f2f2f2; 
+  position: absolute;
+  content: '';
+  left: -10px;
+}
+.message-containor .write-comment{position: relative}
+.message-containor .write-comment:before {
+    left: -10px;
+    border-right:10px solid #ccc; 
+}
+.message-containor .write-comment:after {
+    left: -9px;
+    border-right:10px solid #fff; top:0
+}
+
+
+.message-containor .comment-body {
+    padding: 10px 16px;
+    background: #fff;
+}
+.comment-body p {
+    word-break: break-all;}
+.message-containor > textarea {
+    padding: 6px;
+}
+.comment-info{
+    float: left;
+    width: 100%;
+}
+
+.imgLoader_comment {
+    position: absolute;
+    right: 26px;
+    transform: translate(0,-50%);
+    top: 50%;
+}
+.comment-section{margin-top: 0px !important; float: left; width: 100%; padding: 9px 0 0; }
+.comment-section .comment-inner {
+    padding: 0 15px;
+}
+
+.comment-info h4{float: left;}
+.comment-info span {
+        float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    border: 1px solid #b6b6b6;
+    padding: 2px 9px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.btn-octicon {
+    display: inline-block;
+    padding: 5px;
+    margin-left: 5px;
+    line-height: 1;
+    color: #586069;
+    vertical-align: middle;
+    background: transparent;
+    border: 0;
+    float: right;
+    margin-top: 4px;
+    outline: none;
+}
+.pr-2 {
+    padding-right: 8px !important;
+}
+.p-1 {
+    padding: 4px !important;
+}
+ .Details-content--shown {
+    display: none !important;
+}
+.octicon {
+    display: inline-block;
+}
+
+
+
+.form-control.input-sm.input-channel-name{
+    width: 90%;
+}
+
+.tm-detail-box {
+    background: #fff;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.tm-detail-box table {
+    float: right;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.tm-detail-box .table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #fff !important;
+}
+
+.tm-detail-box .loader-team-per-members{
+    left: 45% !important;
+    position: relative;
+}
+
+.table > thead > tr > th {
+    color: #242a30;
+    font-weight: 600;
+}
+
+.repo-team{width:190px }
+.repo-team li.commit{border-bottom: 1px solid #e9ebee;border-top:0;border-left:0;border-right: 0 }
+.forcefull-enabled img {
+    float: right;
+    width: 23px;
+}
+
+#ulTeam {
+    box-shadow: 0px 0px 13px 0px #888888;
+    border: none;
+    padding: 0;
+}  
+
+#ulTeam:before,
+.collaborators:before {
+   width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #EEEEEE;
+    content: '';
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    right: 0;
+}
+#ulTeam:after,
+.collaborators:after {
+   width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #EEEEEE;
+    content: '';
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    right: 0;
+}
+
+.collaborators:before {
+    left: auto;
+    right: 12px;
+}
+.collaborators:after {
+    left: auto;
+    right: 11px;
+}
+
+.invite-user {padding-right: 3px !important; padding-left: 9px !important; cursor: pointer;position: relative; }
+.invite-user i {
+    font-size: 15px;
+    display: inline-block;
+    margin: 0 0 0 3px;
+}
+.invite-user span {position: absolute;background: red;font-weight: bold;padding: 0 2px 2px 2px;border-radius: 2px;line-height: 1.1;right: 0px;top: 11px;
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 10px;
+}
+.invite-user span:empty {
+   display: none;
+}
+.collaborators {min-width: 460px; padding: 0px 0 6px 0 !important; border-radius: 3px !important;}
+.collaborators li {float: left; width: 100%; margin-bottom: 7px; border-bottom: 1px solid #f2f2f2; padding-bottom: 4px;}
+.collaborators li:nth-last-child(1) {margin-bottom: 0px; border: none; padding-bottom: 0;}
+.collaborators li div{display: block}
+.collaborators li a{    color: #365899 !important; cursor: pointer; text-decoration: none;font-weight:bold }
+.collaborators li a:hover {color: #365899 !important; background: transparent !important;}
+.collaborators li .user-img {margin-right: 10px}
+.collaborators li .btn-wrap {
+    margin-top: 8px;
+    padding-left: 11px;
+}
+.collaborators li .btn-wrap button {
+    padding: 3px 6px 3px 6px;
+    line-height: 1.2;
+    font-size: 12px;
+}
+.collaborators .collaborator-info {line-height: 1.3}
+.collaborators .ul-collaborators {
+    list-style: none !important;
+    padding: 0 !important;  
+    margin-top: 6px;
+    max-height: 398px;
+    overflow: auto;
+}
+
+.box-header{
+    background: rgba(60, 141, 188, 0.7);
+    margin-bottom: 0;
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    float: left;
+}
+.no-invitation{margin-left: 16px; font-size: 14px;}
+.no-invitation:empty{display: none}
+.box{border-top:0px; width: 100%; background: none; box-shadow: none;}
+.box-header a{color: #fff;}
+.box-header .box-right-content{float: right;}
+.box-header .box-right-content a {
+    float:left;
+}
+
+.box-header .box-right-content .divider {
+    float: left;
+    margin:0px 6px;
+    color: #fff;
+    border: none !important;
+}
+.box-header .box-right-content a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+.box-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 75%; 
+    font-size: 16px !important;
+    line-height: 1.1 !important;
+    color: #fff;
+}
+.box-title::first-letter {
+   text-transform: uppercase;
+}
+.graph-box .box-header {
+    background: transparent;
+    padding: 10px 0;
+    min-height: 47px;
+}
+.graph-box .box-title {
+    color: #222d32;
+    padding-right:5px;
+    display: inline !important;
+}
+
+.box-header .date-input {
+    width: 90px;
+    padding: 4px;
+}
+
+.graph-box .box-body.table-responsive {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+}
+.graph-box #currentDateCommit {
+    display: inline-block;
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.add-content-wrapper .box-body {
+    padding: 0;
+}
+
+.box-header .box-right-content .dropdown {
+    float:left;
+}
+
+.box-header .box-right-content li.commit {
+    padding: 0 3px !important;
+    margin: 0;
+    min-height: 40px;
+}
+
+.box-header .box-right-content li.commit .team-column {
+    display: flex;
+    min-height: 40px;
+    align-items: center;
+}
+
+.box-header .box-right-content li.reviewer-li {
+    background: #8d9195;
+    padding: 8px 0 8px 0 !important;
+    margin: 2px 0 5px;
+}
+
+.box-header .box-right-content .user-img {
+    height: 30px; 
+    width: 30px;
+}
+
+.box-header .box-right-content .dropdown .user-info span {
+    font-size: 13px;
+}
+
+.box-header .box-right-content a:hover {
+    cursor: pointer;
+}
+
+.dropdown .reviewer-li {
+    background: #3c8dbc;
+    color: #fff;
+    text-align: center;
+    margin-top: 13px;
+}
+
+.box-header .box-right-content .dropdown .dropdown-menu-center{left: -53px !important}
+.navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    border: none;
+    padding: 0;
+}
+.blob-num {
+    width: 1%;
+    min-width: 45;
+    padding-right: 20px !important;
+    padding-left: 5px !important;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(27,31,35,0.3);
+    text-align: right;
+    white-space: nowrap;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.add-line-comment, .add-line-reason {
+    position: relative;
+    z-index: 5;
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin: -2px -10px -2px -20px;
+    line-height: 25px;
+    color: #fff !important;
+    text-align: center;
+    text-indent: 0;
+    cursor: pointer;
+    background-color: #0366d6 !important;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(27,31,35,0.15);
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 0;
+    font-size: inherit;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.add-line-comment:hover, .add-line-reason:hover {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+.btn-td{padding: 0px !important}
+.btn-link:hover {text-decoration: underline;}
+.is-hovered .add-line-comment, .add-line-comment:focus , .add-line-reason:focus {
+    opacity: 1;
+}
+.btn-link:hover {text-decoration: underline; opacity: 1;}
+.expanded-row:hover .btn-link{ opacity: 1;}
+.single-comment-section{
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+
+}
+.hidden-box{display: none}
+.code-expandable{background-color: #f1f8ff; }
+.code-expandable span{color: rgba(27,31,35,0.5) !important;}
+.tbl-box tr td.code-expandable:nth-child(2),
+.tbl-box tr td.code-expandable:first-child{ background:#dbedff;}
+.tbl-box tr td.code-deletion:nth-child(2),
+.tbl-box tr td.code-deletion:first-child{ background:#ffdce0;border-color:#fdaeb7 }
+.tbl-box tr td.code-addition:nth-child(2),
+.tbl-box tr td.code-addition:first-child{ background:#cdffd8;border-color:#bef5cb }
+
+.edit-comment-box { width: 97.2% !important; float: left !important; margin: 10px !important;}
+.single-comment-box .edit-comment-box .message-containor .write-comment::after, .single-comment-box .edit-comment-box .message-containor .write-comment::before{
+    border:none;
+}
+.edit-comment-box .mesage-box .post-comment-box{ padding:10px 10px 0; margin-top:0px;}
+.edit-comment-box .mesage-box .message-containor{ width:100%;}
+.edit-comment-box .comment-editor{ background: #fff !important;}
+.md-editor .md-footer, .md-editor > .md-header { padding: 0 4px 6px 4px !important;}
+.md-editor .md-controls { display: none;}
+.md-editor > textarea{ border-bottom: 0px !important;}
+.comment-bottom-section .edit-comment-box { margin:0 auto !important;}
+.comment-bottom-section .mesage-box {width: 91.2%;}
+.comment-bottom-section .mesage-box .post-comment-box{ padding: 0;}
+.single-comment-box-list .comment .comment-header .delete-comment,
+.single-comment-box-list .comment .comment-header .edit-comment{ display: none}
+.comment:hover .comment-header .delete-comment,
+.comment:hover .comment-header .edit-comment{ display:block; cursor: pointer}
+
+.label-parent_sha {
+    background-color: #3c8dbc !important;
+    margin: 0 0 0 4px;
+}
+
+.commit-blob{background-color: transparent !important;}
+.label-parent_sha a{color: #fff !important;display: inline;padding: .2em .6em .3em;
+    font-size: 100% !important;
+    font-weight: 700 !important;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;}
+
+.reviewer-comment.dropdown {
+    float: right;
+}
+.reviewer-comment.dropdown ul {
+    top: -2px;
+    left: -134px;
+    padding: 0;
+    min-width: 130px;
+}
+.reviewer-comment.dropdown ul li a {
+    margin: 0;
+    padding: 7px 10px;
+    color: #24292e;
+}
+.reviewer-comment.dropdown ul li a:hover {
+    background-color: #f8f8f8;
+}
+.reviewer-comment.dropdown button {
+    color: #e1e1e1;
+    background-color: #fff;
+    border-color: #e1e1e1;
+    font-size: 22px;
+    padding: 5px 8px;
+    line-height: 0;
+}
+.reviewer-comment.dropdown.open > .dropdown-toggle.btn-primary,
+.reviewer-comment.dropdown.open > .dropdown-toggle.btn-primary:focus,
+.reviewer-comment.dropdown > .dropdown-toggle.btn-primary:focus {
+    background-color: #fff !important;
+    color: #e1e1e1;
+    border-color: #e1e1e1;
+}
+
+.comment-section .panel-comment-detail {
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    margin-top: 7px;
+    background: #f5f5f5;
+}
+.panel-comment-detail textarea, .edit-comment-input {
+    width: 92.5%;
+    padding: 11px 15px 9px;
+    line-height: 18px;
+    resize: none;
+    margin-left: 6.3%;
+    margin-top: -1px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    font-size: 13px;
+    height: 41px;
+    max-height: 70px !important;
+    overflow: auto !important;
+}
+.panel-comment-detail textarea::-webkit-input-placeholder,
+.edit-comment-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #bdc0c3;
+}
+.panel-comment-detail textarea::-moz-placeholder,
+.edit-comment-input::-webkit-input-placeholder { /* Firefox 19+ */
+    color: #bdc0c3;
+}
+.panel-comment-detail textarea:-ms-input-placeholder,
+.edit-comment-input::-webkit-input-placeholder { /* IE 10+ */
+    color: #bdc0c3;
+}
+.panel-comment-detail textarea:-moz-placeholder,
+.edit-comment-input::-webkit-input-placeholder { /* Firefox 18- */
+    color: #bdc0c3;
+}
+.comment-list {
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.comment-text {
+    width: 92.5%;
+    float: right;
+    line-height: 1.3;
+    position: relative;
+    padding-right: 25px;
+}
+.comment-text > span.comment-time {
+    display: block;
+    color: #9E9E9E;
+    font-size:12px;
+}
+.comment-text > span.user-name-comment {
+    color: #367fa9; font-weight:600; display: inline-block;
+}
+.panel-comment-detail textarea:focus {
+    outline: none;
+}
+.comment-section .profile-pic-user {
+    position: absolute;
+}
+.comment-section .comment-dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.comment-section .dropdown-menu {
+    left: auto;
+    top:84%;
+    right: 0;
+    min-width: 88px;
+    padding-left: 11px;
+}
+
+.comment-dropdown ul li {
+    padding-bottom:3px;
+    width: 100%;
+    float: left;
+}
+
+.comment-dropdown ul li:last-child {
+    padding-bottom:0px;
+}
+
+.comment-dropdown ul li a {
+    font-size:13px !important;
+    letter-spacing: 0.3px;
+}
+
+.comment-dropdown ul li a:hover {
+    color:#367fa9;
+}
+
+
+
+.comment-dropdown ul li a span {
+    font-size:11px !important;
+    margin-right:5px !important;
+}
+
+.comment-section .dropdown-menu:after, .comment-section .dropdown-menu:before {
+	bottom: 100%;
+	right:7%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.comment-section .dropdown-menu:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.comment-section .dropdown-menu:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-bottom-color: #ddd;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.comment-section .dropdown-toggle {
+    background-color: transparent;
+    color: rgb(153, 152, 152);
+    border-color: transparent;
+    padding: 5px;
+    line-height: 0;
+}
+
+
+.comment-section .dropdown-toggle:hover, .comment-section .dropdown-toggle:focus{
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow:none;
+}
+
+.comment-dropdown .dropdown.open, .comment-dropdown .dropdown.open .dropdown-toggle{
+    border-color: transparent;
+    background-color: transparent;
+    color:rgb(153, 152, 152);
+    box-shadow:none;
+}
+
+.post-container .post-content-panel a:hover {
+    background: transparent;
+}
+.comment-section .comment-text:hover .comment-dropdown {
+    display: block; 
+}
+
+.change-info .change-info-icon {
+    float: left;
+}
+
+.change-info .change-info-text {
+    float: left;
+    line-height: 15px;
+    margin: 0 0 0 8px;
+}
+
+.full-width {
+    width: 100%;
+    float: left;
+}
+
+.commit-check-section .box-body {
+    padding: 0 10px;
+}
+
+.commit-check-section .box-body .file {
+    margin-top: 7px;
+}
+
+.commit-check-section .label-parent_sha {
+    padding: 4px 0 4px;
+    width: auto;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.commit-check-section .label-parent_sha a {
+    font-weight: normal !important;
+}
+
+.commit-file-column,
+.commit-full-file-column {
+    padding: 0 5px;
+}
+
+.team-manage-section li.commit {
+    margin: 5px 0 0;
+}
+
+.team-manage-section .team-manage-column {
+    display: flex;
+    width: 100%;
+}
+
+.team-manage-section .user-info {
+    align-self: center;
+    flex-basis: 80%;
+    max-width: none;
+}
+
+.commit-lineup .commit .user-info .commit-name {
+
+}
+
+.team-manage-section .team-manage-right-column {
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 20%;
+}
+
+.rejected-reason-category-box{
+    width: 80%;
+    max-width: 780px;
+}
+
+.rejected-reason-box{
+    height: 150px;
+    padding: 0px 0px 15px 0px;
+    width: 80%;
+    max-width: 782px;
+}
+
+.rejected-reason-box select{
+    height:100%
+}
+
+@media (min-width: 768px){
+    #repositoryIssueModal .modal-dialog {
+        width: 850px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1149px) {
+    .upload-pic-col .profile-pic-comment {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .profile-pic-comment {
+        max-width: 280px;
+    }
+    .upload-pic-col .profile-pic-comment {
+        max-width: 280px;
+    }
+    .profile-pic-comment .form-group::after {
+        bottom: -15px;
+    }
+}
+
+
+ /* Style the Image Used to Trigger the Modal *******Image Preview********/
+ .uploadImgPreview {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.uploadImgPreview:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1100; /* Sit on top */
+    padding-top: 40px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close_preview {
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 1;
+    position: absolute;
+    right: 35px;
+    top: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.close_preview:hover,
+.close_preview:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.admin-profile-col {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.admin-profile-col .user-img {
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    border: 10px solid #ecf0f5;
+}
+
+.admin-profile-col .user-profile-detail {
+    width: auto;
+    float: left;
+    padding: 35px 15px 20px 15px;
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+.admin-profile-col .user-profile-detail .admin-name {
+    font-size: 27px;
+}
+.admin-profile-col .user-profile-detail .admin-mail {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.admin-profile-col .user-profile-detail p {
+    margin-bottom: 0px;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+} 
+@media only screen and (max-width: 570px){
+    .collaborators {
+        min-width: auto;
+    }
+} 
+
+.control-sidebar{
+    display: none !important;
+}
+
+.reviewerRoles{
+    float: right !important;
+}
+.commit-upper-wrap .reviewer-ul .reviewer-item .m-right-30{ margin-right:30px; }
+
+
+.reviewer-item .user-info.reviewdetail-tip {
+    padding: 5px 0 0 5px;
+    margin: 0;
+}
+
+.commit-wrap li.commit .collaborator-li-column a.delete-icon {
+    margin: 0;
+    float: right;
+}
+
+.collaborator-li-column .reviewlist_li_dropdown {
+    margin: 2px 0 0;
+}
+
+.commit-files-box .reviewer-item .sha-det{
+    padding-top:8px;
+}
+
+/* .reviewlist_li_dropdown{
+    width: 63%;
+} */
+
+.imageUploadExtention{
+    color: red;
+}
+
+.user-info .label-count{
+    color: #24292e !important;
+    border: 1px solid #e3e3e3;
+    font-size: 10px;
+}
+
+.animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+.comment-detail-section {
+    margin: 10px 0 0 0 !important;
+}
+
+
+#timeline {
+    list-style: none;
+    position: relative;
+  }
+  #timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 2px;
+    background-color: #4997cd;
+    left: 50%;
+    margin-left: -1.5px;
+  }
+  #timeline .clearFix {
+    clear: both;
+    height: 0;
+  }
+  #timeline .timeline-badge {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -25px;
+    background-color: #4997cd;
+    z-index: 100;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  #timeline .timeline-badge span.timeline-balloon-date-day {
+    font-size: 1.4em;
+  }
+  #timeline .timeline-badge span.timeline-balloon-date-month {
+    font-size: .7em;
+    position: relative;
+    top: -10px;
+  }
+  #timeline .timeline-badge.timeline-filter-movement {
+    background-color: #ffffff;
+    font-size: 1.7em;
+    height: 35px;
+    margin-left: -18px;
+    width: 35px;
+    top: 40px;
+  }
+  #timeline .timeline-badge.timeline-filter-movement a span {
+    color: #4997cd;
+    font-size: 1.3em;
+    top: -1px;
+  }
+  #timeline .timeline-badge.timeline-future-movement {
+    background-color: #ffffff;
+    height: 35px;
+    width: 35px;
+    font-size: 1.7em;
+    top: -16px;
+    margin-left: -18px;
+  }
+  #timeline .timeline-badge.timeline-future-movement a span {
+    color: #4997cd;
+    font-size: .9em;
+    top: 2px;
+    left: 1px;
+  }
+  #timeline .timeline-movement {
+    border-bottom: dashed 1px #4997cd;
+    position: relative;
+  }
+  #timeline .timeline-movement.timeline-movement-top {
+    height: 60px;
+  }
+  #timeline .timeline-movement .timeline-item {
+    padding: 10px 0;
+  }
+  #timeline .timeline-movement .timeline-item .timeline-panel {
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    color: #666;
+    padding: 10px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  }
+  #timeline .timeline-movement .timeline-item .timeline-panel .timeline-panel-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* #timeline .timeline-movement .timeline-item .timeline-panel.credits .timeline-panel-ul {
+    text-align: right;
+  } */
+  #timeline .timeline-movement .timeline-item .timeline-panel.credits .timeline-panel-ul li {
+    color: #666;
+  }
+  #timeline .timeline-movement .timeline-item .timeline-panel.credits .timeline-panel-ul li span.importo {
+    color: #468c1f;
+    font-size: 1.3em;
+  }
+  #timeline .timeline-movement .timeline-item .timeline-panel.debits .timeline-panel-ul {
+    text-align: left;
+  }
+  #timeline .timeline-movement .timeline-item .timeline-panel.debits .timeline-panel-ul span.importo {
+    color: #e2001a;
+    font-size: 1.3em;
+  }
+  .header-add-btn-row{
+      margin-bottom: 10px;
+      width: 100%;
+      float: left;
+    }
+  .modal-share-code{
+      width:80% !important;
+    }
+  .modal-share-code .modal-body{
+      max-height:500px !important;
+    }
+    
+    .showoff-container{
+        max-width: 100% !important;
+    }
+    .showoff .box-body .post-content-panel {
+    padding: 15px;
+    }
+/* .showoff-box .box-comment{padding: 8px 10px !important}
+.showoff .comment-section .comment-dropdown{top: 15px !important}
+.showoff .comment-section {margin-bottom: 10px;} */
+.showoff .profile-users-img{position: unset !important;width: 30px !important; height: 30px !important}
+.showoff .profile-pic-user .profile-users-img::after{position: unset !important;}
+.showoff .comment-text{margin-left: 0px; width: 94.5% ;}
+.showoff .comment-section{padding: 10px; margin-bottom: 10px; }
+.showoff .comment-list:last-child{border-bottom: 0px;}
+.showoff .comment-list {
+    margin-top: 5px;
+    margin-bottom: 0px !important;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+
+}
+.img-push textarea{
+    padding: 5px 15px 9px;
+    line-height: 18px;
+    resize: none;
+    margin-top: -1px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    font-size: 13px;
+    height: 34px;
+    max-height: 70px !important;
+    overflow: auto !important;
+  }
+.showoff .box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff !important;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}   
+.showoff  .box-header {
+    color: #444;
+    background: #ffffff !important;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+.showoff  .user-block .username a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3c8dbc !important;
+}
+.showoff .showoff-box .box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+.like-box img{padding-bottom: 10px}
+
+
+.org-drop  img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.org-drop li a  {
+    display: block;
+    padding: 8px 0px 8px 10px;
+    overflow: hidden;
+    color: inherit;
+    cursor: pointer;
+    border-bottom: 1px solid #eaecef;
+}
+
+.org-drop .dropdown-header{
+    padding: 8px 10px;
+    line-height: 16px;
+    background: #f6f8fa;
+    border-bottom: 1px solid #e1e4e8;
+    font-weight: 600;
+    color: #24292e;
+}
+.org-drop  .btn {
+    position: relative;
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-repeat: repeat-x;
+    background-position: -1px -1px;
+    background-size: 110% 110%;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 250px;
+    text-align: left;
+}
+.org-drop .dropdown-name {
+    width: calc(100% - 40px);
+    max-width: 100% !important;
+}
+.org-drop .chevron-down::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    content: "";
+    border: 4px solid;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -2px;
+}
+/*.dropdown-menu { //please specify div before implement
+    top: 100%;
+    left: 0;
+    margin: 0px 0 0;
+    border-radius: 0;
+    width: 100%;
+}*/
+.org-drop .btn-default:hover, .org-drop .btn-default:active, .org-drop .btn-default.hover {
+    background-color: #eee;
+}
+.org-drop .btn-group.open .dropdown-toggle, 
+.org-drop .btn-default:active, 
+.org-drop .btn-default:focus{
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: #eee !important;
+    border-color: #ddd !important;
+}
+
+.org-drop .btn-default:active:focus,
+.org-drop .open > .dropdown-toggle.btn-default:focus, 
+.org-drop .open > .dropdown-toggle.btn-default:hover{
+    border-color: #ddd !important;
+}
+.content {
+    position: relative;
+}
+.dropdown-right {
+    position: absolute;
+    top: -28px;
+    right: 16px;
+}
+.commit-blob .user-info {
+    max-width: 1170px;
+}
+.commit-blob .user-info a {
+    white-space: normal !important;
+}
+
+a.my-profile {
+    color: #FFFFFF;
+}
+a.my-profile:hover {
+    color: #FFFFFF;
+}
+
+/***
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+
+/* Profile container */
+.profile {
+    margin: 20px 0;
+  }
+  
+  /* Profile sidebar */
+  .profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+  }
+  
+  .profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+  }
+  
+  .profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  
+  .profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+  }
+  
+  .profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+  }
+      
+  .profile-usermenu {
+    margin-top: 30px;
+  }
+  
+  .profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+  }
+  
+  .profile-usermenu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+  }
+  
+  .profile-usermenu ul li.active {
+    border-bottom: none;
+  }
+  
+  .profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+  }
+  
+  /* Profile Content */
+  .profile-content {
+    padding: 20px;
+    background: #fff;
+    
+  }
+  .top-btn-org-list {
+      width: 160px !important;
+  }
+  .organization-list {
+      top: 7px;
+      right: 4px;
+  }
+  .dashboard-repo-not-found {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .archive-project-header {
+    float: right;
+    width: 140px;
+    margin: 0px 0px 0px 15px;
+  }
+  .archive-project-header .btn-group.org-drop {
+    width:100%;
+  }
+  .archive-project-header .btn-group.org-drop .top-btn-org-list{
+    width:100% !important;
+    padding: 3px 10px;
+  }
+
+  #team_member_projects .box-title {
+    padding-top: 4px;
+}
+  .archive-project-header>.switch {
+      top:13px;
+  }
+  .should-unmute {
+      background: #ff5937;
+  }
+
+  .content-wrapper, .right-side{
+      background:#f5f5f5 !important;
+  }
+  .table-team-members tr td.team-member {
+    position: inherit;
+}
+
+.reason-box {
+    width: 100%;
+    display: inline-block;
+}
