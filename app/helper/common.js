@@ -1,61 +1,15 @@
 /* eslint-disable */
 const fs = require('fs');
 const hbs = require('hbs');
-const crypto = require('crypto');
-const base64 = require('base-64');
-const utf8 = require('utf8');
 const date_format = require('dateformat');
 
 const partial_root_path = '/app/views/partials/';
-const url_crypt = require('url-crypt')(
-  '~{ry*I)==yU/]9<7DPk!Hj"R#:-/Z7(hTBnlRS=4CXF',
-);
+
 const {
   enums: { commitStatus, repositoryRoles, projectType },
 } = require('./constants');
 
-const base64Encode = text => {
-  const bytes = utf8.encode(text);
-  const encoded_text = base64.encode(bytes);
-  return encoded_text;
-};
 
-const base64Decode = text => {
-  const bytes = base64.decode(text);
-  const decoded_text = utf8.decode(bytes);
-  return decoded_text;
-};
-// Part of https://github.com/chris-rock/node-crypto-examples
-
-const algorithm = 'aes-256-ctr';
-const password = '@coolreviewpassword!';
-
-const encrypt = text => {
-  const cipher = crypto.createCipher(algorithm, password);
-  let crypted = cipher.update(text, 'utf8', 'hex');
-  crypted += cipher.final('hex');
-  return crypted;
-};
-
-const decrypt = text => {
-  const decipher = crypto.createDecipher(algorithm, password);
-  let dec = decipher.update(text, 'hex', 'utf8');
-  dec += decipher.final('utf8');
-  return dec;
-};
-
-// Encrypt your data
-const urlEncrypt = text => url_crypt.cryptObj(text);
-
-const urlDecrypt = text => {
-  try {
-    return url_crypt.decryptObj(text);
-  } catch (err) {
-    err.message = `Failed to decrypt param '${text}'`;
-    err.status = 404;
-    throw err;
-  }
-};
 
 const loadPartialView = (view_name, data) => {
   let content = '';
@@ -451,12 +405,6 @@ const replaceAll = (target, search, replacement) =>
   target.replace(new RegExp(escapeRegExp(search), 'g'), replacement);
 
 module.exports = {
-  base64Encode,
-  base64Decode,
-  encrypt,
-  urlEncrypt,
-  urlDecrypt,
-  decrypt,
   getQuery,
   getProjectsEmailDataQuery,
   getCommitsReviewStatusQuery,

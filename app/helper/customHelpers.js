@@ -1,6 +1,6 @@
 const date_format = require('dateformat');
 const hbs = require('hbs');
-const { loadPartialView, urlEncrypt } = require('../helper/common');
+const { loadPartialView } = require('../helper/common');
 const {
   enums: { notificationType },
 } = require('../helper/constants');
@@ -46,28 +46,6 @@ hbs.registerHelper('notification_message', data => {
       data.notification_type === notificationType.Rejected
         ? ' rejected the commit '
         : ' commented on commit ';
-  }
-  return new hbs.SafeString(output);
-});
-
-hbs.registerHelper('commit_url_notification', data => {
-  let output = '';
-  if (data) {
-    output = `${process.env.BASE_URL}/commit?id=${urlEncrypt(
-      data.repository_id,
-    )}&sha=${data.commit.dataValues.short_sha}&name=${
-      data.repository.dataValues.name
-    }`;
-  }
-  return new hbs.SafeString(output);
-});
-
-hbs.registerHelper('repodetail_url_notification', data => {
-  let output = '';
-  if (data) {
-    output = `${process.env.BASE_URL}/repodetail?id=${urlEncrypt(
-      data.repository_id,
-    )}&name=${urlEncrypt(data.repository.dataValues.name)}`;
   }
   return new hbs.SafeString(output);
 });
