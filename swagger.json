@@ -1,0 +1,1040 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "ucreate Review tool Application API",
+        "description": "",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "basePath": "",
+    "tags": [
+        {
+            "name": "Authenticate",
+            "description": "API for upload database diagram in the system"
+        },
+        {
+            "name": "Project",
+            "description": "API for Project in the system"
+        },
+        {
+            "name": "Commits",
+            "description": "API to get the list of commits of repo"
+        },
+        {
+            "name": "GetCommit",
+            "description": "API for to get specific commit changes"
+        },
+        {
+            "name": "AcceptCommit",
+            "description": "API for accept commits"
+        },
+        {
+            "name": "MarkAsFixedCommit",
+            "description": "API to change the status of commit as mark as fixed"
+        },
+        {
+            "name": "RejectedReasons",
+            "description": "API to get the list of rejected reasons"
+        },
+        {
+            "name": "RejectCommit",
+            "description": "API for reject commits"
+        },
+        {
+            "name": "CommitComment",
+            "description": "API to post the comment on commit"
+        },
+        {
+            "name": "ReadMeFile",
+            "description": "API to get the readMe file"
+        },
+        {
+            "name": "ArchiveProject",
+            "description": "API to archive or unarchive the project for team member"
+        },
+        {
+            "name": "Upload Database Diagram",
+            "description": "API for upload database diagram in the system"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/authentication": {
+            "post": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "description": "Authenticate user with user name and password",
+                "parameters": [
+                    {
+                        "name": "User",
+                        "in": "body",
+                        "description": "post user name and password in json format",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Authenticate"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "description: User details  ",
+                        "schema": {
+                            "$ref": "#/definitions/Authenticate"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/projects": {
+            "get": {
+                "tags": [
+                    "Project"
+                ],
+                "description": "Return list of projects",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    },
+                    {
+                        "name": "organization_id",
+                        "in": "query",
+                        "type": "integer",
+                        "required": true,
+                        "description": "Organization id.",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    },
+                    {
+                        "name": "project_status",
+                        "in": "query",
+                        "type": "integer",
+                        "required": true,
+                        "description": "Status of project - active(0) or archived(1)",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    },
+                    {
+                        "name": "project_type",
+                        "in": "query",
+                        "type": "integer",
+                        "required": true,
+                        "description": "Type of projects, your projects(0) or needs help(1)",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of projects ",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/commits": {
+            "get": {
+                "tags": [
+                    "Commits"
+                ],
+                "description": "Return list of commits of repo",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/Commits"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/Commits"
+                        }
+                    },
+                    {
+                        "name": "repo_id",
+                        "in": "query",
+                        "description": "Encoded Repository Id",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/Commits"
+                        }
+                    },
+                    {
+                        "name": "commit_status",
+                        "in": "query",
+                        "required": true,
+                        "description": "value should be All, Rejected | To be reviewed, To be reviewed, Rejected, Accepted, Rejected by developers, Rejected by system, Mark as fixed",
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/Commit"
+                        }
+                    },
+                    {
+                        "name": "filter_by_users",
+                        "in": "query",
+                        "description": "Id of users with comma seprated",
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/Commits"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "required": true,
+                        "description": "offset should be page multiple by 20(page start from 0)",
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/Commits"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of pending and rejected commits ",
+                        "schema": {
+                            "$ref": "#/definitions/Commits"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/getCommit": {
+            "get": {
+                "tags": [
+                    "GetCommit"
+                ],
+                "description": "Return detail of commit",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/GetCommit"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/GetCommit"
+                        }
+                    },
+                    {
+                        "name": "repo_full_name",
+                        "in": "query",
+                        "required": true,
+                        "description": "Full repository name.",
+                        "schema": {
+                            "$ref": "#/definitions/GetCommit"
+                        }
+                    },
+                    {
+                        "name": "short_sha",
+                        "in": "query",
+                        "required": true,
+                        "description": "Specify short sha id",
+                        "schema": {
+                            "$ref": "#/definitions/GetCommit"
+                        }
+                    },
+                    {
+                        "name": "sha",
+                        "in": "query",
+                        "required": true,
+                        "description": "Specify sha id.",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list of changed file lists. ",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/acceptCommit": {
+            "post": {
+                "tags": [
+                    "AcceptCommit"
+                ],
+                "description": "Return success messages",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/AcceptCommit"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/AcceptCommit"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Enter the commit details",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AcceptCommit"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "result": {
+                            "success": true,
+                            "accepted_message": "on Jun 26, 2018 by narayan-ucreate"
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/AcceptCommit"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/rejectCommit": {
+            "post": {
+                "tags": [
+                    "RejectCommit"
+                ],
+                "description": "Return success messages",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/RejectCommit"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/RejectCommit"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Parameters of rejection details",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/RejectCommit"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "result": {
+                            "success": true,
+                            "accepted_message": "on Jun 26, 2018 by narayan-ucreate"
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/AcceptCommit"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/rejectedReasons": {
+            "get": {
+                "tags": [
+                    "RejectedReasons"
+                ],
+                "description": "Return list of rejected reasons",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/RejectedReasons"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/RejectedReasons"
+                        }
+                    },
+                    {
+                        "name": "repository_id",
+                        "in": "query",
+                        "description": "Encoded repository Id",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/RejectedReasons"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of rejected reasons",
+                        "schema": {
+                            "$ref": "#/definitions/RejectedReasons"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/databaseDiagram": {
+            "post": {
+                "tags": [
+                    "Upload Database Diagram"
+                ],
+                "description": "create new database diagram",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "comment",
+                        "in": "formData",
+                        "description": "User Comment",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "repository_name",
+                        "in": "formData",
+                        "description": "Repository full name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "database_diagram",
+                        "in": "formData",
+                        "description": "file upload name",
+                        "required": true,
+                        "type": "file"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "get success response "
+                    }
+                }
+            }
+        },
+        "/api/commitComment": {
+            "post": {
+                "tags": [
+                    "CommitComment"
+                ],
+                "description": "Return success messages",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/CommitComment"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/CommitComment"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "commit rejection details",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/CommitComment"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "result": {
+                            "success": true,
+                            "accepted_message": "on Jun 26, 2018 by jaspalucreate"
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/AcceptCommit"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/readMeFile": {
+            "post": {
+                "tags": [
+                    "ReadMeFile"
+                ],
+                "description": "Return success messages",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/ReadMeFile"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/ReadMeFile"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "parameters of readMe api",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/ReadMeFile"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "result": {
+                            "success": true,
+                            "accepted_message": "on July 2018, 2018 by jaspalucreate"
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/ReadMeFile"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/archiveProject": {
+            "post": {
+                "tags": [
+                    "ArchiveProject"
+                ],
+                "description": "Return success messages",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/ArchiveProject"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/ArchiveProject"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "parameters of ArchiveProject api",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/ArchiveProject"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "result": {
+                            "success": true,
+                            "accepted_message": "Project status updated"
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/ArchiveProject"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/markAsFixedCommit": {
+            "post": {
+                "tags": [
+                    "MarkAsFixedCommit"
+                ],
+                "description": "update the status of commit to mark as fixed",
+                "parameters": [
+                    {
+                        "name": "x-access-token",
+                        "in": "header",
+                        "description": "access-token",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/MarkAsFixedCommit"
+                        }
+                    },
+                    {
+                        "name": "x-key",
+                        "in": "header",
+                        "description": "User Id",
+                        "required": true,
+                        "type": "integer",
+                        "schema": {
+                            "$ref": "#/definitions/MarkAsFixedCommit"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "parameters required for mark as fixed api",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "$ref": "#/definitions/MarkAsFixedCommit"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "result": {
+                            "success": true,
+                            "accepted_message": "Status of commit updated"
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/MarkAsFixedCommit"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Authenticate": {
+            "required": [
+                "username",
+                "password"
+            ],
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "Project": {
+            "required": [
+                "x-access-token",
+                "x-key",
+                "organization_id",
+                "project_status",
+                "project_type"
+            ],
+            "properties": {
+                "x-access-token": {
+                    "type": "string"
+                },
+                "x-key": {
+                    "type": "integer"
+                },
+                "organization": {
+                    "type": "integer"
+                },
+                "project_status": {
+                    "type": "integer"
+                },
+                "project_type": {
+                    "type": "integer"
+                }
+            }
+        },
+        "Commits": {
+            "required": [
+                "x-access-token",
+                "x-key",
+                "repo_id",
+                "commit_status",
+                "offset"
+            ],
+            "properties": {
+                "x-access-token": {
+                    "type": "string"
+                },
+                "x-key": {
+                    "type": "integer"
+                },
+                "repo_id": {
+                    "type": "integer"
+                },
+                "commit_status": {
+                    "type": "string"
+                },
+                "offset": {
+                    "type": "integer"
+                }
+            }
+        },
+        "GetCommit": {
+            "required": [
+                "x-access-token",
+                "x-key",
+                "repo_full_name",
+                "short_sha",
+                "sha"
+            ],
+            "properties": {
+                "x-access-token": {
+                    "type": "string"
+                },
+                "x-key": {
+                    "type": "integer"
+                },
+                "repo_full_name": {
+                    "type": "string"
+                },
+                "short_sha": {
+                    "type": "string"
+                },
+                "sha": {
+                    "type": "string"
+                }
+            }
+        },
+        "AcceptCommit": {
+            "required": [
+                "repository_id",
+                "commit_uuid",
+                "short_sha",
+                "time_spent"
+            ],
+            "properties": {
+                "repository_id": {
+                    "type": "integer"
+                },
+                "commit_uuid": {
+                    "type": "string"
+                },
+                "short_sha": {
+                    "type": "string"
+                },
+                "time_spent": {
+                    "type": "integer"
+                }
+            }
+        },
+        "MarkAsFixedCommit": {
+            "required": [
+                "repository_id",
+                "commit_uuid",
+                "short_sha",
+                "time_spent"
+            ],
+            "properties": {
+                "repository_id": {
+                    "type": "integer"
+                },
+                "commit_uuid": {
+                    "type": "string"
+                },
+                "short_sha": {
+                    "type": "string"
+                },
+                "time_spent": {
+                    "type": "integer"
+                }
+            }
+        },
+        "RejectCommit": {
+            "required": [
+                "commit_uuid",
+                "short_sha",
+                "sha",
+                "commit_title",
+                "author_id",
+                "author_email",
+                "author_login",
+                "repo_id",
+                "repo_name",
+                "repo_full_name",
+                "old_reviewer_email",
+                "current_status",
+                "rejected_reason_id",
+                "time_spent"
+            ],
+            "properties": {
+                "commit_uuid": {
+                    "type": "string"
+                },
+                "short_sha": {
+                    "type": "integer"
+                },
+                "sha": {
+                    "type": "string"
+                },
+                "commit_title": {
+                    "type": "string"
+                },
+                "author_id": {
+                    "type": "integer"
+                },
+                "author_email": {
+                    "type": "string"
+                },
+                "author_login": {
+                    "type": "integer"
+                },
+                "repo_id": {
+                    "type": "integer"
+                },
+                "repo_name": {
+                    "type": "string"
+                },
+                "repo_full_name": {
+                    "type": "string"
+                },
+                "old_reviewer_email": {
+                    "type": "string"
+                },
+                "current_status": {
+                    "type": "integer"
+                },
+                "rejected_reason_id": {
+                    "type": "integer"
+                },
+                "time_spent":{
+                    "type": "integer"
+                }
+            }
+        },
+        "RejectedReasons": {
+            "required": [
+                "x-access-token",
+                "x-key"
+            ],
+            "properties": {
+                "x-access-token": {
+                    "type": "string"
+                },
+                "x-key": {
+                    "type": "integer"
+                }
+            }
+        },
+        "CommitComment": {
+            "required": [
+                "x-access-token",
+                "x-key",
+                "sha",
+                "repo",
+                "comment",
+                "comments_count",
+                "position",
+                "path",
+                "committer_id"
+            ],
+            "properties": {
+                "sha": {
+                    "type": "string"
+                },
+                "repo": {
+                    "type": "string"
+                },
+                "comment": {
+                    "type": "string"
+                },
+                "comments_count": {
+                    "type": "integer"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "committer_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "ReadMeFile": {
+            "required": [
+                "x-access-token",
+                "x-key",
+                "repo_name",
+                "organization_name"
+            ],
+            "properties": {
+                "repo_name": {
+                    "type": "string"
+                },
+                "organization_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "ArchiveProject": {
+            "required": [
+                "x-access-token",
+                "x-key",
+                "repo_id",
+                "is_archived",
+                "project_type",
+                "project_status"
+            ],
+            "properties": {
+                "repo_id": {
+                    "type": "string"
+                },
+                "is_archived": {
+                    "type": "boolean"
+                },
+                "project_type": {
+                    "type": "string"
+                },
+                "project_status": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
