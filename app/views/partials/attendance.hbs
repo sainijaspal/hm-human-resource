@@ -1,0 +1,25 @@
+<div class="box">
+    <!-- /.box-header -->
+    <div class="box-body commit-lists">
+        <table id="tbl_assigned_repos" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Arrival Time</th>
+                    <th>Departure Time</th>
+                    <th>Working Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each attendence.empAttendances}}
+                <tr class="odd gradeX">
+                    <td>{{this.dateTrn}} </td>
+                    <td>{{this.arrivalTime}}</td>
+                    <td>{{this.departureTime}}</td>
+                    <td>{{this.workingHours}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

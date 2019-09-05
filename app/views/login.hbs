@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{> head }}
+</head>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a>H.M. International Human Resource Mgt</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+
+            <form action="/" method="post">
+                <div class="form-group has-feedback">
+                    <input type="text" name="username" required class="form-control" placeholder="Enter your username">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="password" required class="form-control" placeholder="Enter your password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 pull-right">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        {{#if message}}
+        <div class="alert alert-danger alert-full-width">
+            <span class="alert-icon">
+                <img src="../images/alert-icon.png" alt="Alert" />
+            </span>
+            <p>{{message}}</p>
+        </div>
+        {{/if}}
+    </div>
+</body>
+
+</html>

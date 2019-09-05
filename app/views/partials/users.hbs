@@ -1,0 +1,59 @@
+<!-- /.box-header -->
+<div class="box-body commit-lists">
+    <input id="hdAdminArea" type="hidden" value="{{user.is_admin}}">
+    <table id="tbl_assigned_repos" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Commits to Review</th>
+                <th>Rejected commits</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{!-- {{#each repos}}
+            <tr class="odd gradeX">
+                <td>
+                    <a href="../repodetail?id={{this.encoded_repo_id}}&name={{this.encoded_name}}">{{this.name}}</a>
+                    <img data-toggle="tooltip" title='{{this.technology_name}}' data-placement="right" width="30" src='{{this.icons}}' />
+                    <span style="display: none"> {{this.technology_name}}</span>
+                    {{#if this.is_forcefull_deployment_enabled}}
+                    <span class="forcefull-enabled">
+                        <img src="../images/forcefully_deployement.png" title="Forcefully deployment enabled." alt="" />
+                    </span>
+                    {{/if}}
+                </td>
+                <td>{{this.reviewcount}} </td>
+                <td>{{this.rejectedcount}}</td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" class="check" {{#if this.is_archived}} checked {{/if}} />
+                        <div name="assign_radio" class="slider round radio-archive" id={{this.repository_id}}></div>
+                    </label>
+                </td>
+                <td>
+                    {{#if ../user.is_admin}}
+                    <a href="../reviewers?id={{this.encoded_repo_id}}&name={{this.encoded_name}}" title="Manage Collaborators">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </a>
+                    {{/if}}
+                    <a href="../projectDashboard?id={{this.encoded_repo_id}}&name={{this.encoded_name}}" title="Dashboard">
+                        <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    </a>
+                    <a title="ReadMe" href="javascript://" onclick="return getReadMeURL('{{this.encoded_name}}');">
+                        <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                    </a>
+                    <a href="../databaseReviewer?id={{this.encoded_repo_id}}" title="Database diagram">
+                        <i class="fa fa-database" aria-hidden="true"></i>
+                    </a>
+                    {{#if ../user.is_admin}}
+                    <a title="Project Stats" href="javascript://" onclick="return getProjectStats('{{this.encoded_repo_id}}');">
+                        <i class="fa fa-th" aria-hidden="true"></i>
+                    </a>
+                    {{/if}}
+                </td>
+            </tr>
+            {{/each}} --}}
+        </tbody>
+    </table>
+</div>

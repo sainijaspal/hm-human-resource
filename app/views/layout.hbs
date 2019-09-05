@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Human Resource | {{ title }}</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
+  <link href='../min/bundle/369b0bb_layout-bundle.css' media='screen' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../stylesheets/style.css" />
+
+  <script src="../min/bundle/376feec_js-layout-header-bundle.js"></script>
+  <script src="../bootstrap/js/bootstrapValidator.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123284060-1"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button);
+
+    $(document).ajaxError(function (xhr, status, error) {
+      if (status.status == 401) {
+        window.location.href = "401"
+      }
+    });
+    
+  </script>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../users" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini">
+          <b>HR</b></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg">
+          Human Resource
+        </span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+           
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="hidden-xs">{{ user.username }}</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <p>
+                    <a href="#" class="my-profile">
+                      {{user.username}}
+                    </a>
+                  </p>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-left">
+                  </div>
+                  <div class="pull-right">
+                    <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <input type="hidden" id="hdnPageName" value="{{page_name}}" />
+        <ul class="sidebar-menu">
+          <li class="treeview" id="users">
+            <a href="../users">
+              <i class="fa fa-users"></i>
+              <span>Users</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>{{title}}</h1>
+        <div class="alert alert-success alert-dismissable" id="alert_box" style="display:none">
+          <a id="alert_close" href="#" class="close" aria-label="close">&times;</a>
+          <strong id="span_msg"></strong>
+        </div>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        {{{body}}}
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- Control Sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <div id="loader_pnl" class="loader_bg" style="display: none;">
+    <div class="main_loader_box">
+      <div class="circle"></div>
+      <div class="circle1"></div>
+    </div>
+  </div>
+
+  <!--  this modal used for add and edit forms -->
+  <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title common-modal-header">Modal Header</h4>
+        </div>
+        <div class="modal-body common-modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="modalTitle">Warning</h4>
+        </div>
+        <div class="modal-body">
+          <span id="modalMsg"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" id="btnModalClose">Close</button>
+          <button type="button" class="btn btn-primary" id="btnModalOk">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../min/bundle/82bbb78_js-layout-bottom-section-bundle.js"></script>
+
+</body>
+
+</html>
