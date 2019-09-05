@@ -1,0 +1,94 @@
+.faceMocion { display: none;padding-bottom:8px;padding-top:8px;padding-right: 8px;
+    padding-left: 0px;box-sizing: border-box;background: white;color: white;position: absolute;width: auto;height:52px;line-height: 25px;
+    border-radius: 25px;transition: .25sease-in-out;color:black;border: 1px solid #c5c3c3;
+    -webkit-box-shadow: 4px 4px 21px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 21px -9px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 21px -9px rgba(0,0,0,0.75);}
+.faceMocion div{margin-left: 8px;float: left;
+        width: 35px; height: 35px; cursor: pointer;
+         transition: all 0.2s ease;}.selectorFace{margin-left: 8px;
+            float: left;width: 48px; height: 48px; 
+            cursor: pointer; transition: all 0.2s ease;}
+.faceMocion div:hover{ -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);-ms-transform:scale(1.25);
+    -o-transform:scale(1.25);transform:scale(1.25);}
+.molesto{
+        margin-left: 8px;
+        float: left;width: 48px; 
+        height: 48px; background: url(sqhTN9lgaY1.png) 0 0; 
+}
+.asusta{background: url(sqhTN9lgaY1.png) 0 -48px; }
+.divierte{background-image: url(sqhTN9lgaY1.png);background-position: 0 -70px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+.gusta{background-image: url(sqhTN9lgaY1.png);background-position: 0 -105px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+.amo{background-image: url(sqhTN9lgaY1.png);background-position: 0 -140px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+.triste{background: url(sqhTN9lgaY1.png) 0 -240px; }
+.asombro{background: url(sqhTN9lgaY1.png) 0 -288px; }
+.alegre{background: url(sqhTN9lgaY1.png) 0 -336px; }
+.MensajeTexto{display:none;position:absolute;border:1px solid #333;background-color:#161616;
+    border-radius:5px;padding:3px;color:#fff;font-family: sans-serif;font-size: 12px;}
+.IconoPequenio{width: 24px;height: 24px; background-size: 24px; background-repeat: no-repeat;}
+
+a[aria-pressed="true"] {
+    color: rgb(64, 128, 255)
+  }
+  a[aria-pressed="false"] {
+    color: #777;
+  }
+
+  .like-box .like-btn{color: #777; cursor: pointer;
+    font-size: 16px !important;
+    padding: 3px 24px;}
+.like-box .like-btn:hover{background-color: #f7f7f7;}
+.haha-icon{
+    background-position: -19px -307px;
+}
+
+.love-icon {
+    background-position: -19px -326px;
+}
+.like-icon {
+    background-position: 0px -175px;
+}
+
+.like-box .unselected-like{
+    background-position: 0px -193px;
+}
+
+.like-box .like-btn .fa{
+    background-image: url(emo-icons.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 3px;
+}
+
+.small-like{
+    background-position: 0 -716px;
+}
+.small-love {
+    background-position: -17px -682px;
+}
+
+.small-haha {
+    background-position: -17px -665px;
+}
+
+.small-fa{
+    background-image: url(emo-icons.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+.liked-area a{float: left;margin-top: 3px}
+.liked-area .like-count{margin-left: 3px; margin-right: 8px}
+.liked-section{float: left;}
