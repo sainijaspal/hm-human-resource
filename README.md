@@ -60,23 +60,4 @@
         npm start
         The API will be running on http://localhost:4000 now [may differ in case port already in use]
 
-## External Services/API Reference
-- **Email Service**
-    >
-        - PostMark
-        - Create Account on Postmark (https://postmarkapp.com) and verify the sender signatures.
-        - Create email templetes on Postmark
-        - Set Postmark token and template IDs in environment/config variables
-- **Images Storage**
-    >
-        - AWS S3
-         1. Your S3 credentials can be found on the Security Credentials section of the AWS Acount
-         2. Open the S3 section of the AWS Management Console and create a new bucket.
-         3. Set AWS access key, secret key, bucket name etc. as environment variables.
-        Reference: https://aws.amazon.com/s3
-- **Github API**
-    >
-        Github API is used for getting the commits/comments/projects/code
-        Reference: https://api.github.com
-
 
