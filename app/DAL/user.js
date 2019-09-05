@@ -54,7 +54,7 @@ const getUserAttendence = async (empCode) => {
         OvTim: x.P,
       }
     });
-    //remove columns row
+    //remove columns row from the list
     attendance = attendance.filter(y => y.empCode != "EmpCode");
     const empAttendances = attendance.filter(y => y.empCode == empCode);
     const aryAttendance = [];
